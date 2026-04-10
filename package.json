@@ -1,0 +1,36 @@
+{
+  "name": "agora-convoai-local-avatars",
+  "version": "1.0.0",
+  "description": "Agora ConvoAI with local 3D VRM avatar rendering and audio-driven lip-sync",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "dev": "nodemon backend/server.js",
+    "build": "echo 'No build step required for vanilla JS frontend'",
+    "test": "echo 'No tests specified'"
+  },
+  "dependencies": {
+    "agora-access-token": "^2.0.4",
+    "agora-rtc-sdk-ng": "^4.24.1",
+    "agora-rtm": "^2.2.3-2",
+    "agora-token": "^2.0.5",
+    "axios": "^1.6.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  },
+  "keywords": [
+    "agora",
+    "conversational-ai",
+    "vrm",
+    "avatar",
+    "webrtc",
+    "three.js",
+    "lip-sync"
+  ],
+  "author": "Bac Huang",
+  "license": "MIT"
+}

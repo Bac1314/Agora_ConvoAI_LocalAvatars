@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../Agora_Sentino_Agents"
+		},
+		{
+			"path": "../Agora_ConvoAI_Web_Template"
+		}
+	],
+	"settings": {}
+}

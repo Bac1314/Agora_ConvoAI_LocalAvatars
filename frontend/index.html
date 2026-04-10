@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Agora ConvoAI — Avatar Demo</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="/lib/agora-rtc-sdk-ng/AgoraRTC_N-production.js"></script>
+  <script src="/lib/agora-rtm/agora-rtm.js"></script>
+</head>
+<body>
+  <main class="card">
+    <div class="header">
+      <h1>Agora ConvoAI Avatar</h1>
+      <p class="muted">AI voice agent with 3D local avatar</p>
+    </div>
+
+    <!-- Agent state indicator -->
+    <section id="agent-state" class="agent-state">
+      <div class="state-indicator">
+        <span class="state-dot"></span>
+        <span class="state-text">offline</span>
+      </div>
+    </section>
+
+    <!-- VRM Avatar Container -->
+    <section class="avatar-section">
+      <div id="avatar-container" class="avatar-container">
+        <div class="avatar-placeholder">
+          <div class="placeholder-spinner"></div>
+          <p>Loading avatar…</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Avatar selector -->
+    <section class="avatar-selector">
+      <label for="avatarSelect">Avatar</label>
+      <select id="avatarSelect">
+        <!-- Populated by app.js from CONFIG.AVAILABLE_AVATARS -->
+      </select>
+      <span class="avatar-tip">Click avatar to wave</span>
+    </section>
+
+    <!-- Controls -->
+    <section class="controls">
+      <button id="join" class="btn primary">
+        <span class="btn-text">Start ConvoAI</span>
+        <span class="btn-loading" style="display: none;">Starting…</span>
+      </button>
+      <button id="leave" class="btn danger" disabled>
+        <span class="btn-text">Stop ConvoAI</span>
+        <span class="btn-loading" style="display: none;">Stopping…</span>
+      </button>
+    </section>
+
+    <footer class="foot">
+      <small>Agora ConvoAI + VRM avatar with lip-sync</small>
+    </footer>
+  </main>
+
+  <!-- Chat toggle button -->
+  <div id="chatToggle" class="chat-toggle" style="display: none;">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M8 12h8M8 8h8M8 16h5M7 20l4-4h6a3 3 0 003-3V7a3 3 0 00-3-3H7a3 3 0 00-3 3v10a3 3 0 003 3z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
+
+  <!-- Chat panel -->
+  <div id="chatPanel" class="chat-panel">
+    <div class="chat-header">
+      <h3>Chat with AI</h3>
+      <button id="closeChatBtn" class="close-btn">×</button>
+    </div>
+
+    <div class="chat-messages" id="chatMessages">
+      <!-- Messages populated by JavaScript -->
+    </div>
+
+    <div id="typingIndicator" class="typing-indicator" style="display: none;">
+      <div class="typing-dots">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+      <span>thinking…</span>
+    </div>
+
+    <div class="chat-input">
+      <input
+        type="text"
+        id="messageInput"
+        placeholder="Start the conversation to begin chatting…"
+        disabled
+      />
+      <button id="sendBtn" class="send-btn" disabled>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </div>
+
+    <div class="chat-actions">
+      <button id="clearChatBtn" class="clear-btn">Clear Chat</button>
+    </div>
+  </div>
+
+  <script src="utils/config.js"></script>
+  <script src="utils/vrmAvatarManager.js"></script>
+  <script src="utils/chat.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
