@@ -2,7 +2,7 @@
 
 A voice AI agent with a real-time animated 3D avatar. The AI agent runs via [Agora ConvoAI](https://docs.agora.io/en/conversational-ai/overview/product-overview), while the avatar renders locally in the browser using Three.js and VRM models with audio-driven lip-sync.
 
-<img src="assets/avatars/Agora_ConvoAI_LocalAvatar.png" alt="Agora ConvoAI Local Avatar Demo" style="border-radius: 12px;" />
+<img src="assets/Agora_ConvoAI_LocalAvatar.png" alt="Agora ConvoAI Local Avatar Demo" style="border-radius: 12px;" />
 
 ## How it works
 
