@@ -25,7 +25,7 @@ A voice AI agent with a real-time animated 3D avatar. The AI agent runs via [Ago
 
 **1. Clone and install**
 ```bash
-git clone <repo-url>
+git clone https://github.com/Bac1314/Agora_ConvoAI_LocalAvatars.git
 cd Agora_ConvoAI_LocalAvatars
 npm install --legacy-peer-deps
 ```
